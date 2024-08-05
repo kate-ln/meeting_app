@@ -14,10 +14,11 @@ def new():
 @app.route("/send", methods=["POST"])
 def send():
     content = request.form["name"]
-    if groups.send(content):
+    location = request.form['location'] 
+    if groups.send(content, location):
         return redirect("/")
     else:
-        return render_template("error.html", message="Nimen lisääminen ei onnistunut")
+        return render_template("error.html", message="Ryhmän lisääminen ei onnistunut")
 
 @app.route("/login", methods=["GET", "POST"])
 def login():

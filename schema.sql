@@ -8,5 +8,6 @@ CREATE TABLE groups (
     id SERIAL PRIMARY KEY,
     name TEXT UNIQUE,
     user_id INTEGER REFERENCES users,
-    created_at TIMESTAMP
+    created_at TIMESTAMP,
+    location TEXT
 );
