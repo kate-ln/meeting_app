@@ -1,19 +1,16 @@
-{% if session.username %}
-<p>Tervetuloa harrastusseurasovellukseen, {{ session.username }}</p>
-<hr>
 Rekisteröityjä ryhmiä tällä hetkellä: {{ count }}
 <hr>
 {% for g in groups %}
-<i>Ryhmän nimi:</i> {{ group[0] }}
+<i>Ryhmän nimi:</i> {{ g[0] }}
 <p>
-<i>Perustaja:</i> {{ group[1] }}
+<i>Perustaja:</i> {{ g[1] }}
 <p>
-<i>Aika:</i> {{ group[2].strftime("%Y-%m-%d %H:%M:%S") }}
+<i>Aika:</i> {{ g[2].strftime("%Y-%m-%d %H:%M:%S") }}
 <hr>
 {% endfor %}
 {% if session.user_id %}
 Olet kirjautunut sisään.
-<a href="/new">Lähetä viesti</a> | <a href="/logout">Kirjaudu ulos</a>
+<a href="/new">Lisää ryhmä</a> | <a href="/logout">Kirjaudu ulos</a>
 {% else %}
 <a href="/login">Kirjaudu sisään</a>
 {% endif %}

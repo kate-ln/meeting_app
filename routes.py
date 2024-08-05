@@ -5,7 +5,7 @@ import groups, users
 @app.route("/")
 def index():
     list = groups.get_list()
-    return render_template("index.html", count=len(list), messages=list)
+    return render_template("index.html", count=len(list), groups=list)
 
 @app.route("/new")
 def new():
@@ -13,7 +13,7 @@ def new():
 
 @app.route("/send", methods=["POST"])
 def send():
-    content = request.form["content"]
+    content = request.form["name"]
     if groups.send(content):
         return redirect("/")
     else:
