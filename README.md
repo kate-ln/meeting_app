@@ -13,4 +13,4 @@ Sovelluksen ominaisuuksia ovat:
 7. Ylläpitäjä voi luoda ja poistaa uusia teemoja, joihin harrastusryhmät voidaan luokitella.
 
 Päivitys 4.8.
-Kirjautumisen jälkeen (tällä hetkellä mikä tahansa tunnus ja salasana kelpaa) käyttäjä voi lisätä uuden harrastusryhmän järjestelmään (pohja melkein valmis).
+Kirjautumisen jälkeen käyttäjä voi lisätä uuden harrastusryhmän järjestelmään ja näkee rekisteröidyt ryhmät listana etusivulla (eivät sisällä vielä paikkakuntaa ja teemaa). Sovellusta voi testata luomalla tiedostossa schema.sql osoitetut tietokantataulut ja lisäämällä oma .env tiedosto, joka sisältää seuraavat rivit DATABASE_URL=postgresql:///(oma tunnus) ja SECRET_KEY=(oma salainen avain).
