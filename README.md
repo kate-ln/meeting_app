@@ -13,4 +13,4 @@ Sovelluksen ominaisuuksia ovat:
 7. Ylläpitäjä voi luoda ja poistaa uusia teemoja, joihin harrastusryhmät voidaan luokitella.
 
 Päivitys 4.8.
-Kirjautumisen jälkeen (tällä hetkellä mikä tahansa tunnus ja salasana kelpaa) käyttäjä voi lisätä uuden harrastusryhmän järjestelmään (runko melkein valmis).
+Kirjautumisen jälkeen (tällä hetkellä mikä tahansa tunnus ja salasana kelpaa) käyttäjä voi lisätä uuden harrastusryhmän järjestelmään (pohja melkein valmis).
