@@ -1,33 +1,19 @@
 {% if session.username %}
 <p>Tervetuloa harrastusseurasovellukseen, {{ session.username }}</p>
 <hr>
-Tämänhetkinen ryhmien määrä: {{ count }}
+Rekisteröityjä ryhmiä tällä hetkellä: {{ count }}
 <hr>
 {% for g in groups %}
-{{ g.name }}
+<i>Ryhmän nimi:</i> {{ group[0] }}
+<p>
+<i>Perustaja:</i> {{ group[1] }}
+<p>
+<i>Aika:</i> {{ group[2].strftime("%Y-%m-%d %H:%M:%S") }}
 <hr>
 {% endfor %}
-<a href="/new">Lisää uusi ryhmä</a>
-<hr>
-{% for g in groups %}
-Ryhmä:{{ g.group_name}} <br>
-Paikkakunta:{{ g.location}} <br>
-Teema: {{ g.theme }} <br>
-Luotu: {{ g.created_at.strftime("%Y-%m-%d %H:%M:%S") }} <br>
-<a href="/group/{{ group.id }}">Mene ryhmään</a> |
-<a href="/result/{{ g.id }}">Näytä tulokset</a> <br>
-<hr>
-{% endfor %}
-
-
-
-<a href="/logout">Kirjaudu ulos</a>
+{% if session.user_id %}
+Olet kirjautunut sisään.
+<a href="/new">Lähetä viesti</a> | <a href="/logout">Kirjaudu ulos</a>
 {% else %}
-<form action="/login" method="POST">
-<p>Tunnus:<br>
-<input type="text" name="username"></p>
-<p>Salasana:<br>
-<input type="password" name="password"></p>
-<input type="submit" value="Kirjaudu">
-</form>
+<a href="/login">Kirjaudu sisään</a>
 {% endif %}
