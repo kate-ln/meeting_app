@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for meetingapp-solitary-sea-1508 on 2024-08-06T19:08:27+04:00
+# fly.toml app configuration file generated for meeting-app on 2024-08-06T19:52:45+04:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'meetingapp-solitary-sea-1508'
-primary_region = 'jnb'
+app = 'meeting-app'
+primary_region = 'ams'
 
 [build]
 
